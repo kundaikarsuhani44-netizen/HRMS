@@ -2,7 +2,7 @@
   "name": "kinara-hrms",
   "version": "1.0.0",
   "private": true,
-  "description": "Kinara HR — HRMS for Konkan Coastal Foods (Employee Master, Attendance, Leave, HR assistant agent)",
+  "description": "Kinara HR \u2014 HRMS for Konkan Coastal Foods (Employee Master, Attendance, Leave, HR assistant agent)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -14,7 +14,9 @@
     "db:reset": "tsx scripts/migrate.ts --reset && tsx scripts/seed.ts",
     "test": "vitest run",
     "test:watch": "vitest",
-    "agent:eval": "tsx scripts/agent-eval.ts"
+    "agent:eval": "tsx scripts/agent-eval.ts",
+    "vercel-build": "tsx scripts/setup-db.ts && next build",
+    "db:setup": "tsx scripts/setup-db.ts"
   },
   "engines": {
     "node": ">=20"
